@@ -1,0 +1,104 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#1b2838;background:linear-gradient(#1b2838,#10161f 600px);color:#c6d4df;font:14px/1.4 "Motiva Sans",Arial,Helvetica,sans-serif;min-height:100vh}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+ul{list-style:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.top{background:#171a21;height:100px}
+.top-inner{position:relative;height:100%}
+.topbar{position:absolute;right:20px;top:0;display:flex;align-items:center;gap:10px;font-size:12px;color:#b8b6b4}
+.install{background:#5c7e10;color:#d2efa9;padding:5px 14px;border-radius:2px}
+.install:hover{background:#6e9618}
+.link-btn:hover{color:#fff}
+.dd{position:relative}
+.dd-menu{display:none;position:absolute;right:0;top:100%;background:#3d4450;min-width:170px;z-index:50;box-shadow:0 4px 12px #000a}
+.dd-menu.open{display:block}
+.dd-menu li{padding:8px 14px;cursor:pointer;color:#dcdedf}
+.dd-menu li:hover{background:#e5e5e5;color:#171a21}
+.logo-row{display:flex;align-items:center;gap:40px;height:100%;padding-top:10px}
+.logo{font-size:28px;font-weight:700;letter-spacing:3px;color:#c7d5e0;display:flex;align-items:center;gap:10px}
+.logo-mark{font-size:44px;line-height:1}
+.logo sup{font-size:9px}
+.main-nav{display:flex;gap:20px;font-size:16px;font-weight:600;margin-top:4px}
+.main-nav a{color:#dcdedf;padding:4px 0}
+.main-nav a:hover{color:#fff}
+.main-nav a.active{color:#1a9fff}
+.subnav{background:#171d25;box-shadow:0 2px 6px #0008;position:relative;z-index:20}
+.subnav-inner{display:flex;justify-content:space-between;align-items:center;height:46px}
+.menus{display:flex;gap:6px}
+.menus>li{position:relative}
+.menus>li>button{padding:12px;color:#dcdedf;font-size:14px;font-weight:600}
+.menus>li>button:hover,.menus>li.on>button{color:#fff}
+.menus .dd-menu{right:auto;left:0;top:calc(100% - 4px)}
+.menus .dd-menu a{display:block;padding:8px 14px;color:#dcdedf}
+.menus .dd-menu a:hover{background:#e5e5e5;color:#171a21}
+.search{position:relative;display:flex;width:480px;max-width:50%}
+.search input{flex:1;background:#316282;background:#2a475e;border:1px solid #000;border-right:0;color:#fff;padding:0 12px;height:34px;font-style:italic}
+.search input:focus{outline:0;background:#e6eef3;color:#111;font-style:normal}
+.search button{width:34px;height:34px;background:#1a9fff;border-radius:0 3px 3px 0}
+.results{display:none;position:absolute;top:36px;left:0;right:0;background:#c9d4dc;color:#111;z-index:60;box-shadow:0 6px 14px #000a}
+.results.open{display:block}
+.results a{display:flex;justify-content:space-between;padding:8px 12px}
+.results a:hover,.results a.sel{background:#e4ecf1}
+.results .none{padding:10px 12px;color:#555}
+.hero{height:452px;position:relative;overflow:hidden;background:linear-gradient(90deg,#314a29 0,#3e6a3a 20%,#1d7f7a 55%,#6e8a63 80%,#57764f 100%)}
+.hero-art{position:absolute;inset:0}
+.hero-art::before{content:"";position:absolute;inset:0;background:url("img/planet-zoo.png") center/auto 100% no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent);mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent)}
+.hero-title{position:absolute;left:50%;top:40px;transform:translateX(-50%);text-align:center;color:#fff;font-weight:900;font-size:26px;letter-spacing:1px;line-height:.95;text-shadow:0 2px 8px #0008}
+.hero-title b{display:block;font-size:64px}
+.hero-title span{font-size:80px;margin-left:4px}
+.badge{position:absolute;left:50%;top:222px;transform:translateX(-50%);color:#fff;font-weight:800;margin-top:0;background:#fff9;background:rgba(10,30,30,.7);padding:6px 20px;border-radius:20px;font-size:15px;letter-spacing:0}
+.badge:hover{background:#1a9fff}
+.featured-head{display:flex;justify-content:space-between;align-items:center;margin:22px 0 10px;padding-right:0}
+.featured-head h2{color:#fff;font-size:21px;font-weight:600}
+.gift{background:linear-gradient(90deg,#06bfff,#2d73ff);color:#fff;padding:8px 14px;border-radius:2px;font-weight:600}
+.gift:hover{filter:brightness(1.12)}
+.carousel{position:relative;display:grid;grid-template-columns:minmax(0,1.78fr) minmax(0,1fr) 308px;height:484px}
+.slide-art{display:flex;align-items:flex-end;padding:24px;background:#000;font-size:44px;font-weight:900;color:#fff;text-shadow:0 3px 12px #000;transition:background .4s}
+.slide-info{background:linear-gradient(135deg,#1c2f45,#16273a);padding:16px;display:flex;flex-direction:column;position:relative}
+.slide-info h3{color:#fff;font-size:22px;font-weight:500}
+.rev{color:#66c0f4;margin-top:6px;font-size:15px}
+.rev span{color:#c6d4df}
+.pop{margin-top:auto;display:flex;gap:10px;align-items:center;color:#a4d007}
+.pop .bars{font-size:26px;letter-spacing:-3px}
+.pop b{font-weight:600}.pop span{color:#fff;font-size:16px}
+.price{align-self:flex-end;background:#0006;color:#fff;padding:8px 14px;margin-top:16px;border-radius:2px}
+.tip{margin-left:10px;align-self:start;background:#3e5a70;background:#33526b;padding:16px;font-size:12px;position:relative;color:#c6d4df}
+.tip h4{color:#fff;font-weight:500;font-size:15px}
+.tip p{margin:8px 0 12px;color:#dbe6ee}
+.rev-box{background:#00000040;padding:8px;margin-bottom:14px;color:#dbe6ee}
+.rev-box span{color:#66c0f4}
+.tags{display:flex;flex-wrap:wrap;gap:3px;margin-top:6px}
+.tags span{background:#00000040;padding:2px 6px;color:#9fb8ca}
+.arrow{position:absolute;left:-60px;top:50%;font-size:44px;color:#c6d4df;z-index:5;transform:translateY(-50%)}
+.arrow.right{left:auto;right:-50px}
+.arrow:hover{color:#fff}
+.dots{display:flex;justify-content:center;gap:7px;margin:20px 0 40px}
+.dots button{width:14px;height:8px;border-radius:4px;background:#ffffff26}
+.dots button.on{background:#fff}
+.dots button:hover{background:#ffffff80}
+.promo{display:flex;justify-content:space-between;align-items:center;height:120px;padding:0 40px;margin-bottom:60px;background:linear-gradient(90deg,#f1e7c6,#8fd0c8);color:#c4532a;font-weight:800;font-style:italic;font-size:34px;border-radius:2px}
+.promo-sub{font-size:22px}
+.promo:hover{filter:brightness(1.05)}
+.modal{position:fixed;inset:0;background:#000a;display:flex;align-items:center;justify-content:center;z-index:100}
+.modal[hidden]{display:none}
+.box{position:relative;background:#1b2838;border:1px solid #3d4450;padding:28px;width:340px}
+.box h3{color:#fff;margin-bottom:16px;font-weight:500}
+.box label{display:block;margin-bottom:12px;font-size:12px;color:#8ba5b8}
+.box input{display:block;width:100%;margin-top:4px;background:#32363f;border:1px solid #000;color:#fff;padding:8px}
+.close{position:absolute;right:12px;top:10px;font-size:18px}
+.green{background:linear-gradient(90deg,#75b022,#588a1b);color:#fff;padding:9px;width:100%;border-radius:2px;margin-top:6px}
+#modalMsg{margin-top:12px;color:#a4d007}
+.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,80px);background:#1a9fff;color:#fff;padding:10px 18px;border-radius:3px;transition:transform .25s;z-index:120}
+.toast.show{transform:translate(-50%,0)}
+@media(max-width:1000px){
+ .carousel{grid-template-columns:1fr;height:auto}
+ .slide-art{height:260px}.slide-info{min-height:200px}.tip{margin:0}
+ .arrow{display:none}.hero{height:300px}.search{width:260px}.menus{display:none}
+ .main-nav{gap:12px;font-size:13px}.logo{font-size:20px}.promo{font-size:20px;padding:0 16px}.promo-sub{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.hero-art::before{content:"";position:absolute;inset:0;background:url(img/planet-zoo.png) center/auto 100% no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent);mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent)}
+.badge{position:absolute;left:50%;top:250px;transform:translateX(-50%);color:#fff;font-weight:800;margin:0;white-space:nowrap}
+@media(max-width:1000px){.badge{top:150px}}

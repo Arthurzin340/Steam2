@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steam</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-inner">
+    <div class="topbar">
+      <a class="install" href="https://store.steampowered.com/about/" target="_blank" rel="noopener">⬇ Instale o Steam</a>
+      <button class="link-btn" id="loginBtn">iniciar sessão</button>
+      <span class="sep">|</span>
+      <div class="dd lang">
+        <button class="link-btn" data-dd>idioma ▾</button>
+        <ul class="dd-menu" id="langMenu">
+          <li data-lang="pt-BR">Português (Brasil)</li>
+          <li data-lang="en">English</li>
+          <li data-lang="es">Español</li>
+        </ul>
+      </div>
+    </div>
+    <div class="logo-row">
+      <a class="logo" href="#"><span class="logo-mark">◍</span> STEAM<sup>®</sup></a>
+      <nav class="main-nav">
+        <a class="active" href="#">LOJA</a>
+        <a href="https://steamcommunity.com/" target="_blank" rel="noopener">COMUNIDADE</a>
+        <a href="https://store.steampowered.com/about/" target="_blank" rel="noopener">SOBRE</a>
+        <a href="https://help.steampowered.com/" target="_blank" rel="noopener">SUPORTE</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="subnav">
+  <div class="wrap subnav-inner">
+    <ul class="menus" id="menus"></ul>
+    <form class="search" id="searchForm" autocomplete="off">
+      <input id="searchInput" placeholder="Buscar na loja" aria-label="Buscar na loja">
+      <button type="submit" aria-label="Buscar">🔍</button>
+      <ul class="results" id="results"></ul>
+    </form>
+  </div>
+</div>
+
+<section class="hero" id="hero">
+  <div class="hero-art">
+    <a class="badge" href="https://store.steampowered.com/search/?term=planet+zoo+2" target="_blank" rel="noopener">JÁ DISPONÍVEL</a>
+  </div>
+</section>
+
+<main class="wrap">
+  <div class="featured-head">
+    <h2>Destaques e recomendados</h2>
+    <button class="gift" id="giftBtn">🎁 Enviar um vale-presente</button>
+  </div>
+
+  <div class="carousel" id="carousel">
+    <button class="arrow left" id="prev" aria-label="Anterior">❮</button>
+    <button class="arrow right" id="next" aria-label="Próximo">❯</button>
+    <a class="slide-art" id="slideArt" target="_blank" rel="noopener"></a>
+    <div class="slide-info">
+      <h3 id="sTitle"></h3>
+      <p class="rev" id="sRev"></p>
+      <div class="pop"><span class="bars">▂▄▆</span><div><b>Popular</b><br><span id="sPop"></span></div></div>
+      <span class="price" id="sPrice"></span>
+    </div>
+    <aside class="tip" id="tip">
+      <h4 id="tTitle"></h4>
+      <small id="tDate"></small>
+      <p id="tDesc"></p>
+      <div class="rev-box">Análises em PT-BR:<br><span id="tRev"></span></div>
+      <small>Marcadores de usuários:</small>
+      <div class="tags" id="tTags"></div>
+    </aside>
+  </div>
+  <div class="dots" id="dots"></div>
+
+  <a class="promo" href="https://store.steampowered.com/" target="_blank" rel="noopener">
+    <span class="promo-main">Festival Gastronômico</span>
+    <span class="promo-sub">Descontos, demos e muito mais</span>
+  </a>
+</main>
+
+<div class="modal" id="modal" hidden>
+  <div class="box">
+    <button class="close" id="closeModal" aria-label="Fechar">✕</button>
+    <h3 id="modalTitle">Entrar</h3>
+    <form id="loginForm">
+      <label>Nome de usuário<input required id="user"></label>
+      <label>Senha<input required type="password"></label>
+      <button class="green">Entrar</button>
+    </form>
+    <p id="modalMsg"></p>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
